@@ -16,6 +16,10 @@ Flight::route('/about', function(){
     require 'views/about.php';
 });
 
+Flight::route('GET /user/@userID+', function($userID){
+	$_GET['id'] = $userID;
+    require 'views/users.php';
+});
 
 // Fin des routes
 Flight::start();
