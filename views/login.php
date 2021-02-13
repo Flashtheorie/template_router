@@ -17,7 +17,7 @@
                 	<form action="./action/login.php" method="POST">
                     <input type="text" class="form-control" name="username" placeholder="Nom d'utilisateur"> 
                     <br>
-                    <input type="text" class="form-control" name="password" placeholder="Mot de passe"> 
+                    <input type="password" class="form-control" name="password" placeholder="Mot de passe"> 
                     <hr>
                     <input type="submit" class="form-control" value="Connexion">
                 	</form>

@@ -1,3 +1,13 @@
+<?php 
+require './controller/Users.php';
+require './config/credentials.php';
+$id = $_GET['id'];
+
+
+
+$req = $bdd->prepare("SELECT * FROM users WHERE username = '$id'");
+$req->execute();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +20,21 @@
 <?php require 'navbar.php'; ?>
 
 <div class="container">
-<h1>Bienvenue, vous êtes l'utilisateur <strong> <?= $_GET['id'] ?> </strong></h1>
+<div class="jumbotron" align="center">
 
-<div class="jumbotron">Cette page se trouve ici --> 
-<code>http://localhost:8888/router/views/users.php?id=<?= $_SESSION['id'] ?></code>
+<?php 
 
+if ($req->rowCount() == 1)
+{
+	ShowUserInfos($_GET['id']);
+}
+else
+{
+	echo "Aucun compte n'a été trouvé";
+}
+
+?>
 </div>
-
 </div>
 </body>
 </html>

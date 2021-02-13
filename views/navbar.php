@@ -2,7 +2,7 @@
 <link rel="icon" type="image/x-icon" href="assets/img/youtube.ico" />
 <nav class="navbar  navbar-expand-lg bg-secondary text-uppercase " id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="index"><i class="fab fa-youtube"></i> Site Random</i> </a>
+                <a class="navbar-brand js-scroll-trigger" href="http://localhost:8888/router/index"><i class="fab fa-youtube"></i> Site Random</i> </a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu 
                     <i class="fas fa-bars"></i>
