@@ -1,9 +1,9 @@
 <?php
 require 'flight/Flight.php';
 
-define(__DIR__, 'router');
+define(__FILE__, 'http://localhost:8888/router/');
 
-// Création des routes : 
+// Création des routes de base: 
 Flight::route('/index', function(){
     require("views/index.php");
 });
@@ -16,6 +16,12 @@ Flight::route('/about', function(){
     require 'views/about.php';
 });
 
+Flight::route('/login', function(){
+    require 'views/login.php';
+});
+
+
+// Création des routes compliquées: 
 Flight::route('GET /user/@userID+', function($userID){
 	$_GET['id'] = $userID;
     require 'views/users.php';
