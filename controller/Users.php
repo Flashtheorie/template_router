@@ -12,8 +12,9 @@
 		$req->execute();
 		$user = $req->fetch(PDO::FETCH_OBJ);
 
-		echo "<h2>Nom d'utilisateur : </h2><br>".$user->username;
-		echo "<br>";
+		echo "<h6>Nom d'utilisateur : </h6><br><h1>".$user->username;
+		echo "</h1><br>";
+		echo "<a href=''>Modifier son profil</a>";
 
 	}
 

@@ -30,7 +30,7 @@ if ($req->rowCount() == 1)
 }
 else
 {
-	echo "Aucun compte n'a été trouvé";
+	echo "Aucun compte n'a été trouvé avec ce nom d'utilisateur : <h3><strong>".$_GET['id']."</strong></h3>";
 }
 
 ?>
