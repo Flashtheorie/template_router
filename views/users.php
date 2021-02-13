@@ -10,7 +10,13 @@
 <?php require 'navbar.php'; ?>
 
 <div class="container">
-<h1>Bienvenue, vous êtes l'utilisateur possédant l'ID : <?= $_GET['id'] ?></h1>
+<h1>Bienvenue, vous êtes l'utilisateur <strong> <?= $_GET['id'] ?> </strong></h1>
+
+<div class="jumbotron">Cette page se trouve ici --> 
+<code>http://localhost:8888/router/views/users.php?id=<?= $_SESSION['id'] ?></code>
+
+</div>
+
 </div>
 </body>
 </html>

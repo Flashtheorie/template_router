@@ -20,6 +20,9 @@ Flight::route('/login', function(){
     require 'views/login.php';
 });
 
+Flight::route('/logout', function(){
+    require 'views/logout.php';
+});
 
 // Création des routes compliquées: 
 Flight::route('GET /user/@userID+', function($userID){

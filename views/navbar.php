@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <link rel="icon" type="image/x-icon" href="assets/img/youtube.ico" />
 <nav class="navbar  navbar-expand-lg bg-secondary text-uppercase " id="mainNav">
             <div class="container">
@@ -11,14 +12,18 @@
                         
                         
                         
-                        
+<?php if (!isset($_SESSION['id'])): ?>
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/index" disabled="disabled">Accueil</a></li>
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/about" disabled="disabled">About</a></li>
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/login" disabled="disabled">Connexion</a></li>
+     
+<?php endif ?>                      
 
-
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/index" disabled="disabled">Accueil</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/about" disabled="disabled">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/login" disabled="disabled">Connexion</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/user/1" disabled="disabled">Mon compte</a></li>
-                        
+<?php if (isset($_SESSION['id'])): ?>
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/index" disabled="disabled">Accueil</a></li>
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/user/<?= $_SESSION['id'] ?>" disabled="disabled">Mon compte</a></li> 
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8888/router/views/logout.php" disabled="disabled">Déconnexion</a></li>
+<?php endif ?>                        
                        
                          
                        
