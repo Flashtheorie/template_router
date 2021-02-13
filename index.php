@@ -1,15 +1,19 @@
 <?php
 require 'flight/Flight.php';
 
-define(__CSS__, '../src/css/styles.css');
+define(__DIR__, 'router');
 
 // Création des routes : 
+Flight::route('/index', function(){
+    require("views/index.php");
+});
+
 Flight::route('/', function(){
-    require("/views/index.php");
+    require("views/index.php");
 });
 
 Flight::route('/about', function(){
-    require '/views/about.php';
+    require 'views/about.php';
 });
 
 
